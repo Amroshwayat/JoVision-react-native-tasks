@@ -1,22 +1,20 @@
-import React, { useEffect } from 'react';
-import { Text, View } from 'react-native';
+import React from 'react';
+import { View, Text } from 'react-native';
 
-type MyClassPageProps = {
-  showConsole: boolean;
-};
+export default class MyClassPage extends React.Component {
+  componentDidMount() {
+    console.log("MyClassPage loaded ✅");
+  }
 
-export default function MyClassPage_20(props: MyClassPageProps) {
-  useEffect(() => {
-    console.log("MyClassPage loaded ");
+  componentWillUnmount() {
+    console.log("MyClassPage unloaded ❌");
+  }
 
-    return () => {
-      console.log("MyClassPage unloaded ");
-    };
-  }, []); 
-
-  return (
-    <View>
-      {props.showConsole && <Text>Amro Shwayat</Text>}
-    </View>
-  );
+  render() {
+    return (
+      <View >
+        <Text >Amro Shwayat</Text>
+      </View>
+    );
+  }
 }

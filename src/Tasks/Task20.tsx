@@ -1,16 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, Button } from 'react-native';
-import MyClassPage_20 from '../components/MyClassPage_20';
+import MyClassPage from '../components/MyClassPage_20';
 
-export default function Task20() {
-  const [show, setShow] = useState(false);
+type AppState = {
+  showPage: boolean;
+};
 
-  return (
-    <View >
-      <Button title={show ? "Hide" : "Show"} onPress={() => setShow(!show)} />
+export default class App extends React.Component<{}, AppState> {
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+      showPage: false,
+    };
+  }
 
-      {/* Conditional Rendering */}
-      {show && <MyClassPage_20 showConsole={show} />}
-    </View>
-  );
+  togglePage = () => {
+    this.setState(prevState => ({ showPage: !prevState.showPage }));
+  };
+
+  render() {
+    const { showPage } = this.state;
+
+    return (
+      <View >
+        <Button title={showPage ? "Hide" : "Show"} onPress={this.togglePage} />
+
+       
+        {showPage && <MyClassPage />}
+      </View>
+    );
+  }
 }
+
