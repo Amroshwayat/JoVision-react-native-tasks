@@ -7,7 +7,7 @@
 
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import Task32 from "./src/Tasks/Task32";
+import Task33 from "./src/Tasks/Task33";
 
 
 
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <SafeAreaView>
- <Task32/>
+ <Task33/>
 
     </SafeAreaView>
    
