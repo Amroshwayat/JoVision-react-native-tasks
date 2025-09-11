@@ -5,20 +5,18 @@
  * @format
  */
 
-import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
-import Task40 from "./src/Tasks/Task40";
 
+import React from "react";
+
+import Task41 from "./src/Tasks/Task41";
 
 
 function App() {
 
 
   return (
-    <SafeAreaView>
- <Task40/>
-
-    </SafeAreaView>
+  
+    <Task41 />
    
   );
 }
