@@ -8,7 +8,7 @@
 
 import React from "react";
 
-import Task41 from "./src/Tasks/Task41";
+import Task42 from "./src/Tasks/Task42";
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
 
   return (
   
-    <Task41 />
+    <Task42 />
    
   );
 }
